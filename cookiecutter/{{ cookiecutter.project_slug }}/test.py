@@ -10,6 +10,6 @@ class Test(TestCase):
 
     def test_do(self):
         self.assertEqual(str(do(self.test_path)), '')
-    
+
     def test_do2(self):
         self.assertEqual(str(do2(self.test_path)), '')

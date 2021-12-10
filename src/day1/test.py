@@ -9,7 +9,7 @@ class Test(TestCase):
         return super().setUp()
 
     def test_do(self):
-        assert str(do(self.test_path)) == ''
+        self.assertEqual(str(do(self.test_path)), '7')
     
     def test_do2(self):
-        assert str(do2(self.test_path)) == ''
+        self.assertEqual(str(do2(self.test_path)), '5')

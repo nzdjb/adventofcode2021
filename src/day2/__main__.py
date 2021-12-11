@@ -19,7 +19,18 @@ def do(input_file):
 
 def do2(input_file):
     input = read_to_strings(input_file)
-    return input_file
+    depth, distance, aim = 0, 0, 0
+    for line in input:
+        direction, amount = line.strip().split(' ')
+        match direction:
+            case 'forward':
+                distance += int(amount)
+                depth += int(amount) * aim
+            case 'up':
+                aim -= int(amount)
+            case 'down':
+                aim += int(amount)
+    return depth * distance
 
 if __name__ == "__main__":
     print(do(argv[1]))

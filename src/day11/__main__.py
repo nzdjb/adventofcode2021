@@ -30,7 +30,15 @@ def find_flashes(input, flashes = []):
     return input
 
 def do2(input_file):
-    return input_file
+    input = array(read_to_int_lists(input_file))
+    for step in range(1000):
+        input = input + 1
+        input = find_flashes(input, [])
+        flashes = list(zip(*where(input >= 10)))
+        if len(flashes) == 100:
+            return step + 1
+        for x, y in flashes:
+            input[x][y] = 0
 
 if __name__ == "__main__":
     print(do(argv[1]))

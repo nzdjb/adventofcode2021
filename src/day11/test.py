@@ -12,4 +12,4 @@ class Test(TestCase):
         self.assertEqual(str(do(self.test_path)), '1656')
 
     def test_do2(self):
-        self.assertEqual(str(do2(self.test_path)), '')
+        self.assertEqual(str(do2(self.test_path)), '195')
